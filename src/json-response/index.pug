@@ -9,22 +9,27 @@ block body
   body.impress-not-supported
     include ../fallback.pug
     #impress
-      #board.step.slide(data-x='-1000', data-y='-1500')
-        q title
-      #aboutme.step.slide(data-x='0', data-y='-1500')
+      .step.slide#board(data-x='-1000', data-y='-1500')
+        q JavaScript の苦手なあなたに
+        img(src='http://4.bp.blogspot.com/-ub5B6A2wCZ4/Wat2OAh6dmI/AAAAAAABGWA/4bPTYOUuZ5wpZzBw54UqngQo8KNtfvatwCLcBGAs/s800/bar_oachirano_okyakusama.png', width='400rem')
+      .step.slide#aboutme(data-x='0', data-y='-1500')
         include ./profile.pug
-      #about.step(data-x='500', data-y='-1500', data-rotate='90', data-scale='0.3')
+      .step#about(data-x='500', data-y='-1500', data-rotate='90', data-scale='0.3')
         h1 Today, Talk about `JSON`
-      #background.step(data-x='1000', data-y='-1500', data-rotate='90')
+      .step#background(data-x='1000', data-y='-1500', data-rotate='90')
         h2 How to use JSON ?
         pre(style="font-size: 20px").
         script(src="https://gist.github.com/9renpoto/b0b7c006d3fbe368a29e540efd79e216.js")
 
-      #esnext.step(data-x='1200', data-y='-1500', data-scale='0.01')
+      .step#esnext(data-x='1200', data-y='-1500', data-scale='0.01')
         script(src="https://gist.github.com/9renpoto/2b4f0b0f172bb57e93628a5dfa9b8b17.js")
-        img(src="http://4.bp.blogspot.com/-IxWKND4JML8/VwIjILi7wFI/AAAAAAAA5fE/lgjzp6DwT6cVJKTZI5dOQe-AHX4hGDaYw/s800/internet_kanki_woman2.png" style="max-width:20rem;" align="right")
+        img(
+            src="http://4.bp.blogspot.com/-IxWKND4JML8/VwIjILi7wFI/AAAAAAAA5fE/lgjzp6DwT6cVJKTZI5dOQe-AHX4hGDaYw/s800/internet_kanki_woman2.png"
+            style="max-width:20rem;"
+            align="right"
+          )
 
-      #why-is-it-great.step(data-x='1230', data-y='-1500', data-scale='0.01')
+      .step#why-is-it-great(data-x='1230', data-y='-1500', data-scale='0.01')
         ul
           li Easy parse
             b
@@ -33,7 +38,7 @@ block body
             b
               |  components state
 
-      #component-state.step(data-x='1000', data-y='0', data-rotate='90')
+      .step#component-state(data-x='1000', data-y='0', data-rotate='90')
         h2 Too many JavaScript state frameworks
         ul
           li Redux
@@ -41,9 +46,13 @@ block body
           li Flux
           li Rx
           li Vuex
-        img(src="http://3.bp.blogspot.com/-zGMD_MYatSo/VyNc1u6gLyI/AAAAAAAA6I8/b_YPfMpAGT427n6xuXb3KuNk3TiO-qpWgCLcB/s800/regulation_tv_shinpai.png" width="320px" align="right")
+        img(
+            src="http://3.bp.blogspot.com/-zGMD_MYatSo/VyNc1u6gLyI/AAAAAAAA6I8/b_YPfMpAGT427n6xuXb3KuNk3TiO-qpWgCLcB/s800/regulation_tv_shinpai.png",
+            width="320px",
+            align="right"
+          )
 
-      #json-deram-stream.step(data-x='1000', data-y='1500', data-rotate='90')
+      .step#json-deram-stream(data-x='1000', data-y='1500', data-rotate='90')
         h2 Dream streams
         div Pub / Sub (Elm Architecture)
         div(style="width:100%;height:0;padding-bottom:58%;position:relative;")
@@ -60,13 +69,13 @@ block body
           a(href="https://giphy.com/gifs/cats-endless-stream-14aumMYgx9CvKw")
             via GIPHY
 
-      #like-react.step(data-x='1000', data-y='3000', data-rotate='90')
+      .step#like-react(data-x='1000', data-y='3000', data-rotate='90')
         h2 React
         span
           | We love `read-only` state
         script(src="https://gist.github.com/9renpoto/32333fa632d27c99083a70726ee9cd92.js")
 
-      #immutable.step(data-x='1000', data-y='4500', data-rotate='90')
+      .step#immutable(data-x='1000', data-y='4500', data-rotate='90')
         div
           a(href="https://facebook.github.io/immutable-js/")
             | immutable.js
@@ -77,7 +86,7 @@ block body
           a(href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/freeze")
             | Object.freeze
 
-      #end.step(data-x='-500', data-y='-500', data-rotate='0', data-scale='0.1')
+      .step#end(data-x='-500', data-y='-500', data-rotate='0', data-scale='0.1')
         div(style='font-size: 36px; align: center')
           img(src='http://2.bp.blogspot.com/-QKUYCmLZQaM/WYAyZZB0e2I/AAAAAAABF1Q/QdBxruPS3lMAVBN1dCvmBYiDkP-J3l7BACLcBGAs/s800/police_man_kenju_gun.png', width='400px', align='right')
           |           Happy Hacking!
