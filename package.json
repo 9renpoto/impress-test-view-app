@@ -43,6 +43,10 @@
     ],
     "*.pug": [
       "pug-lint"
+    ],
+    "*.md": [
+      "prettier --parser markdown --write",
+      "git add"
     ]
   },
   "main": "n/a",
