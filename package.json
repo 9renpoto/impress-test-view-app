@@ -32,6 +32,7 @@
     "typescript-eslint-parser": "19.0.1",
     "vnu-jar": "18.8.29",
     "webpack": "4.20.2",
+    "webpack-cli": "3.1.1",
     "webpack-dev-server": "3.1.9"
   },
   "license": "MIT",
@@ -63,11 +64,15 @@
     "lint": "run-p lint:*",
     "lint:html": "npm run build:html -- -P && npm run clean:html &&  ts-node validate.ts",
     "lint:pug": "pug-lint src",
-    "precommit": "lint-staged",
     "predeploy": "npm run build",
     "start": "concurrently --kill-others 'npm run w:pug' 'npm run dev'",
     "test": "run-p test:*",
     "test:build": "npm run build",
     "w:pug": "npm run build:html -- -w"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
